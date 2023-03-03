@@ -1,11 +1,14 @@
 import { useState } from "react";
+import BookShow from "./BookShow";
 
-function BookList() {
-    const [books, setBooks] = useState([]);
+function BookList({books, onDelete, changeOrder}) {
+    const renderedBooks = books.map((book) => {
+        return <BookShow key={book.id} book={book} onDelete={onDelete} changeOrder={changeOrder} />
+    });
 
     
     return (
-        <div> Book List </div>
+        <div className="book-list"> {renderedBooks} </div>
     )
 }
 
