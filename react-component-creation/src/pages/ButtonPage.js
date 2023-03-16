@@ -2,8 +2,7 @@ import Button from "../components/Button";
 import { GoBell } from 'react-icons/go'
 
 function ButtonPage() {
-    return <><div> ButtonPage
-     </div>
+    return <>
         <div> <Button secondary>Click me <GoBell /> </Button>  </div>
         <div> <Button warning>Click me 2</Button>  </div>
         <div> <Button danger>Click me 3</Button>  </div>

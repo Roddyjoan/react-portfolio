@@ -9,7 +9,8 @@ function Button({ children,
     warning,
     danger,
     outline,
-    rounded
+    rounded,
+    ...rest
 }) {
 
     const classes = classnames('flex items-center px-3 py-1.5 border', {
@@ -25,10 +26,10 @@ function Button({ children,
         'text-green-500': outline && success,
         'text-yellow-400': outline && warning,
         'text-red-500': outline && danger,
-
+        ...rest
     })
 
-    return <button className={classes}> {children} </button>
+    return <button {...rest} className={classes}> {children} </button>
 }
 
 export default Button;
