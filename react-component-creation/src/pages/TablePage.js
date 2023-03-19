@@ -12,6 +12,8 @@ function TablePage() {
 
 
     const config = [
+
+        // add label for label, render for how to render the table, and sortValue to find which to sort by
         {   
             label: 'Name',
             render: (fruit) => fruit.name,
